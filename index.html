@@ -5,9 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css" ></style>
+    <script src="rps.js" defer></script> 
 </head>
+
 <body>
-    <h1>Is game</h1>
-    <script src="index.js"></script>
+    <div class="header">
+        <div class="subhead-1">
+            <div class="score">Your score:<span id="ps">0</span></div>
+            <div class="title">Rock, Paper, Scissors</div>
+            <div class="score">Computer score:<span id="cs">0</span></div>
+        </div>
+        <div class="subhead-2">
+            <img src="player.png" class="player">
+            <div class="avatar" style="margin-right:auto;">Player</div>
+            <div id="notice">Yes</div>
+            <div class="avatar" style="margin-left:auto">Computer</div>
+            <img src="imgs/bot.png" class="player"></div>
+        </div>
+        <div class="subhead-3">
+            <img src="" class="choice" id="player"/>
+            <img src="" class="choice" id="computer"/>
+        </div>
+    </div>
+
+    <div class="rowflex">
+        <button class="playable">Rock</button>
+        <button class="playable">Paper</button>
+        <button class="playable">Scissors</button>
+        </div>
 </body>
 </html>

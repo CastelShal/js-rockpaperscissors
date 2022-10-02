@@ -1,0 +1,95 @@
+body{
+    background: rgb(0,4,40);
+    background: linear-gradient(157deg, #000429 60%, rgba(0,78,146,1) 100%);
+    margin:0px 0px;
+    padding:0px;
+    max-width:100%;
+    height:100vh;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+div.header{
+    color:white;
+    font-size:40px;
+    background-color :#000852;
+}
+
+div.subhead-1{
+    padding:15px;
+    font-size:32px;
+    text-align: center;
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content:space-between;
+}
+
+div.subhead-2{
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content:center;
+    align-items: center;
+    padding:15px;
+    background-color: #008aff;
+    border-radius:90px;
+}
+
+div.subhead-3{
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content: space-around;
+}
+.avatar{
+    font-size:40px;
+    padding:0px 9px;
+}
+
+.choice{
+    width:200px;
+    height:200px;
+    flex: 0 1 auto;
+    margin:20px;
+    visibility:hidden;
+}
+
+.player{
+    flex:0 1 auto;
+    width:120px;
+    height:auto;
+}
+div.rowflex{
+    width:100%;
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:space-evenly;
+    margin:20px;
+} 
+
+button.playable{
+    flex:0 1 auto;
+    height:125px;
+    width:175px;
+    font-size:30px;
+}
+
+#notice{
+    text-align: center;
+    font-size: 53px;
+    padding:0px 20px;
+}
+
+.score{
+    margin: 19px 55px;
+    /* background-color:navy; */
+    padding:19px;
+    color:white;
+    border-radius:12px;
+    border:6.5px white solid;
+    border-radius: 45px;
+   
+}
+
+.title{
+    background-color:inherit;
+    font-size:40px;
+    margin:auto;
+}

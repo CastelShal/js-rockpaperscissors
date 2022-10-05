@@ -8,30 +8,71 @@ const compchoice = document.querySelector("#computer");
 const playerscore = document.querySelector("#ps");
 const compscore = document.querySelector("#cs");
 const rescolor = document.querySelector('.subhead-2');
+const playbut = document.querySelector('.but button');
+const contBody = document.querySelector('div.body');
 const imagebase = "imgs/";
+const backimage = rescolor.style.background;
+
+console.log(contBody);
 
 buttons.forEach(b=>{
     b.addEventListener('click',play);
 },this)
 
+playbut.addEventListener('click',e=>{
+    playbut.style.display = "none";
+    cscore = 0, pscore = 0, rounds=0;
+    pageLog("")
+    showGame(true);
+    rescolor.style.background = backimage
+    rescolor.backgroundColor = "none";
+})
+
 function play(e){
     rounds++;
     const playerplay = this.textContent.toString().toLowerCase();
-    playerchoice.setAttribute('src',imagebase + playerplay + ".jpg");
+    playerchoice.setAttribute('src',imagebase + playerplay + ".png");
     playerchoice.setAttribute("style","visibility:visible")
 
     const compplay = computerPlay()
-    compchoice.setAttribute("src", imagebase + compplay + ".jpg");
+    compchoice.setAttribute("src", imagebase + compplay + ".png");
     compchoice.setAttribute("style","visibility:visible")
 
     pageLog(evaluateplay(playerplay,compplay));
     updateScore();
 
     if(rounds > 6){
-        buttons.forEach(b=>{
-            b.removeEventListener('click',play);
-        },this)
-        cscore>pscore? pageLog("Computer won"): pscore>cscore?pageLog("Player won"): pageLog("It's a Draw");
+        // buttons.forEach(b=>{
+        //     b.removeEventListener('click',play);
+        // },this)
+        showGame(false)
+
+        if (cscore>pscore) {
+            pageLog("Computer won");
+            rescolor.style.background = "none"
+            rescolor.style.backgroundColor = "red";
+            
+        }
+        else if(pscore>cscore){
+            pageLog("Player won")
+            rescolor.style.background = "none"
+            rescolor.style.backgroundColor = "limegreen";
+        }
+        else{
+            pageLog("It's a Draw");
+        }
+
+        playbut.textContent = "Play again?"
+        playbut.style.display = "unset";
+}
+}
+
+function showGame(val){
+    if (val){
+        contBody.style.display = "block";
+    }
+    else{
+        contBody.style.display = "none";
     }
 }
 
@@ -65,10 +106,10 @@ function evaluateplay(user,comp){
 
     if(user=="rock"){
         if(comp=="paper")
-            {cscore++;return "Comp wins"
-            rescolor.setAttribute('background-color','red')}
+            {cscore++;return "Comp wins";
+            }
         else
-            {pscore++;return "You win"}
+            {pscore++;return "<- You win"}
     }
 
     else if(user=="paper"){

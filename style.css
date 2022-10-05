@@ -29,7 +29,7 @@ div.subhead-2{
     justify-content:center;
     align-items: center;
     padding:15px;
-    background-color: #008aff;
+    background-image: url('imgs/bbg.jpg');
     border-radius:90px;
 }
 
@@ -40,7 +40,6 @@ div.subhead-3{
 }
 .avatar{
     font-size:40px;
-    padding:0px 9px;
 }
 
 .choice{
@@ -49,12 +48,16 @@ div.subhead-3{
     flex: 0 1 auto;
     margin:20px;
     visibility:hidden;
+    border: 9px #3fefa3 groove;
+    background: rgb(123,71,215);
+    background: linear-gradient(90deg, rgba(123,71,215,1) 0%, rgba(181,33,197,1) 80%); 
 }
 
 .player{
     flex:0 1 auto;
     width:120px;
     height:auto;
+    padding: 0px 38px;
 }
 div.rowflex{
     width:100%;
@@ -92,4 +95,20 @@ button.playable{
     background-color:inherit;
     font-size:40px;
     margin:auto;
+}
+
+button.start{
+    width: 250px;
+    height: 125px;
+    font-size: 43px;
+    font-family: 'Times New Roman', sans-serif;
+    border-radius: 30px;
+    background-image: url("imgs/bbg.jpg");
+    color:white;
+}
+
+div.but{
+    width:94%;
+    text-align: center;
+    margin: 30px;
 }
